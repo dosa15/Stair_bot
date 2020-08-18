@@ -1,18 +1,18 @@
 
-#define Motor_Left_1_F                      
-#define Motor_Left_1_B            //Motor Driver 1
-#define Motor_Right_1_F  
-#define Motor_Right_1_B 
+#define Motor_Left_1_F 1                      
+#define Motor_Left_1_B 2           //Motor Driver 1
+#define Motor_Right_1_F 3 
+#define Motor_Right_1_B 4
 
-#define Motor_Left_2_F 
-#define Motor_Left_2_B           //Motor Driver 2
-#define Motor_Right_2_F  
-#define Motor_Right_2_B 
+#define Motor_Left_2_F 5
+#define Motor_Left_2_B 6          //Motor Driver 2
+#define Motor_Right_2_F 7 
+#define Motor_Right_2_B 8
 
-#define Motor_Left_3_F  
-#define Motor_Left_3_B          //Motor Driver 3
-#define Motor_Right_3_F 
-#define Motor_Right_3_B 
+#define Motor_Left_3_F 9 
+#define Motor_Left_3_B 10         //Motor Driver 3
+#define Motor_Right_3_F 11
+#define Motor_Right_3_B 12 
 
 void setup() 
 {
@@ -34,7 +34,20 @@ void loop()
 {
   while(Serial.available())
   {
-    
+    char input=Serial.read();
+    {
+      if(input=='w')
+      forward();
+      else
+      if(input=='s')
+      backward();
+      else
+      if(input=='a')
+      left();
+      else
+      if(input=='d')
+      right();
+    }
   }
 }
 
@@ -84,7 +97,7 @@ void left()
   digitalWrite(Motor_Right_2_B,LOW);
   digitalWrite(Motor_Right_3_B,LOW);
 }
-void right(0
+void right()
 {
     digitalWrite(Motor_Left_1_F,HIGH);
   digitalWrite(Motor_Left_2_F,HIGH);
