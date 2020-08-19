@@ -6,6 +6,7 @@ int right_sensor_state;
 
 void setup() 
 {
+  p
   Serial.begin(9600);
 }
 
@@ -24,7 +25,7 @@ if(right_sensor_state > 500 && left_sensor_state > 500)
 forward();
 else
 if(right_sensor_state < 500 && left_sensor_state < 500)
-stop();
+stopA();
 }
 
 
