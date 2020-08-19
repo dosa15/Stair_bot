@@ -64,52 +64,52 @@ void loop()
   {
     char input=Serial.read();
     {
-      if(input=='w')
+      if(input=='w')                                   //Move forward
       forward();
       else
-      if(input=='s')
+      if(input=='s')                                   //Move Back
       backward();
       else
-      if(input=='a')
+      if(input=='a')                                   //Move Left
       left();
       else
-      if(input=='d')
+      if(input=='d')                                   //Move Right
       right();
       else
-      if(input=='v')
+      if(input=='v')                                   //lift middle part
       middleup();
       else
-      if(input=='b')
+      if(input=='b')                                   //lower middle part
       middledown();
       else
-      if(input=='n')
+      if(input=='n')                                   //lift rear
       rearup();
       else
-      if(input=='m')
+      if(input=='m')                                   //lower rear
       reardown();
       else
-      if(input=='g')
+      if(input=='g')                                   //activate gripper
       {
         servo_1.write(180);
         servo_2,write(270);
       }
       else
-      if(input=='h')
+      if(input=='h')                                   //deactivate gripper
       {
         servo_1.write(0);
         servo_2,write(180);
       }
       else
-      if(input=='t')
+      if(input=='t')                                    //extend actuator
       extendA();
       else
-      if(input=='y')
+      if(input=='y')                                    //retract actuator
       retractA();
       else
-      if(input=='u')
+      if(input=='u')                                   //stop actuator
       stopA();
       else
-      if(input=='q')
+      if(input=='q')                                   //activat autonomous line following
       Autobot();
     }
   }
