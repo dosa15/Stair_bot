@@ -16,13 +16,13 @@ void loop()
     if(input=='g')
     {
       servo_1.write(180);
-      servo_2,write(180);
+      servo_2,write(270);
     }
     else
     if(input=='h')
     {
       servo_1.write(0);
-      servo_2,write(0);
+      servo_2,write(180);
     }
   }
 }
