@@ -110,3 +110,18 @@ void right()
   digitalWrite(Motor_Right_2_B,HIGH);
   digitalWrite(Motor_Right_3_B,HIGH);
 }
+void Stop()
+{
+  digitalWrite(Motor_Left_1_F,LOW);
+  digitalWrite(Motor_Left_2_F,LOW);
+  digitalWrite(Motor_Left_3_F,LOW);
+  digitalWrite(Motor_Right_1_F,LOW);
+  digitalWrite(Motor_Right_2_F,LOW);
+  digitalWrite(Motor_Right_3_F,LOW);
+  digitalWrite(Motor_Left_1_B,LOW);
+  digitalWrite(Motor_Left_2_B,LOW);
+  digitalWrite(Motor_Left_3_B,LOW);
+  digitalWrite(Motor_Right_1_B,LOW);
+  digitalWrite(Motor_Right_2_B,LOW);
+  digitalWrite(Motor_Right_3_B,LOW);
+}
